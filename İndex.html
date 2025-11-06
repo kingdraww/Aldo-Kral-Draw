@@ -1,37 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Çekilişe Katıl | Aldo - Kral Abi </title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aldo • Kral • Draw — Açık Kaynak Çekiliş</title>
+  <meta name="description" content="Aldo-Kral-Draw — Basit, açık kaynak, GitHub Pages çekiliş sistemi. Katıl, denetle, katkıda bulun." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    /* Minimal, modern dark theme — self contained so page çalışır hemen */
+    :root{
+      --bg:#0e1117; --panel:#161920; --muted:#9aa4b2; --accent1:#4f9ef9; --accent2:#8b5cf6; --glass: rgba(255,255,255,0.03);
+      --radius:14px; --maxw:980px;
+    }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;}
+    body{background:linear-gradient(180deg,var(--bg),#07101a);color:#e6eef8;display:flex;align-items:center;justify-content:center;padding:40px;}
+    .card{width:100%;max-width:var(--maxw);background:linear-gradient(180deg,var(--panel),rgba(16,18,22,0.9));border-radius:var(--radius);box-shadow:0 8px 40px rgba(2,6,23,0.6);padding:28px;backdrop-filter: blur(6px);}
+    .row{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    h1{margin:0;font-size:1.6rem;letter-spacing:0.2px}
+    p.lead{color:var(--muted);margin:8px 0 18px}
+    .actions{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#031028}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .meta{display:flex;gap:12px;color:var(--muted);margin-top:18px;flex-wrap:wrap}
+    .col{flex:1;min-width:220px}
+    .panel{background:var(--glass);padding:14px;border-radius:10px;margin-top:16px;color:var(--muted)}
+    code{background:rgba(0,0,0,0.35);padding:3px 6px;border-radius:6px;color:#dbeafe}
+    a.link{color:inherit;text-decoration:none;border-bottom:1px dashed rgba(255,255,255,0.04)}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    .small{font-size:13px;color:var(--muted)}
+    @media (max-width:720px){.row{flex-direction:column}}
+  </style>
 </head>
-<body class="app-container">
-  <header class="app-header">
-    <h1>🎁 Çekilişe Katıl</h1>
-    <p class="subtitle">Kazananlardan biri sen olabilirsin!</p>
-  </header>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <div class="row" style="justify-content:space-between;align-items:flex-start">
+      <div style="flex:1;min-width:240px">
+        <h1 id="title">Aldo • Kral • Draw</h1>
+        <p class="lead">Açık kaynak çekiliş sistemi — GitHub Pages ile statik, şeffaf ve basit. Katıl, denetle, katkıda bulun.</p>
 
-  <main class="form-container">
-    <form id="raffleForm" class="raffle-form">
-      <label for="email">📧 E-posta Adresin</label>
-      <input type="email" id="email" name="email" placeholder="ornek@mail.com" required />
+        <div class="actions">
+          <a class="btn btn-primary" href="index.html?id=default_draw" title="Çekilişe Katıl">Katıl →</a>
+          <a class="btn btn-ghost" href="admin.html" title="Admin Paneli">Admin Paneli</a>
+          <a class="btn btn-ghost" href="results.html" title="Sonuçları Gör">Sonuçlar</a>
+        </div>
 
-      <label for="telegram">@Telegram Kullanıcı Adın</label>
-      <input type="text" id="telegram" name="telegram" placeholder="@kullaniciadi" required />
+        <div class="meta">
+          <span class="small">🛠️ <strong>Open source</strong> — GitHub repo: <a class="link" href="https://github.com/yourname/aldo-kral-draw" target="_blank" rel="noopener">Repo'yu aç</a></span>
+          <span class="small">🔒 Sunucusuz — veriler tarayıcıda saklanır</span>
+          <span class="small">⚠️ Önemli: değerli ödüller için sunuculu çözüm gerekir</span>
+        </div>
+      </div>
 
-      <label for="uid">🔐 Darkex UID </label>
-      <input type="text" id="uid" name="uid" placeholder="örnek: 12345 veya c7x9g" required />
+      <aside style="width:320px;min-width:220px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="panel">
+            <strong>Hızlı Başlangıç</strong>
+            <ol style="margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:14px">
+              <li>Repo'yu clone'la veya bu dosyaları kopyala.</li>
+              <li>GitHub Pages ayarından <code>main branch / root</code> seç.</li>
+              <li>Linki Telegram grubuna paylaş: <code>/index.html?id=TG-2025</code></li>
+            </ol>
+          </div>
 
-      <button type="submit" class="btn-primary">Katıl</button>
-    </form>
+          <div class="panel">
+            <strong>Güvenlik Notu</strong>
+            <p class="small" style="margin:6px 0 0">Bu sürüm tamamen statik ve <em>localStorage</em> tabanlıdır. 2.000 kişilik, yüksek değerde ödül içeren çekilişlerde sunucu tabanlı doğrulama (Supabase/Firebase) şarttır.</p>
+          </div>
+
+          <div class="panel">
+            <strong>Katkıda Bulun</strong>
+            <p class="small" style="margin:6px 0 0">Kod, iyileştirme önerileri veya UI/UX katkıları için PR aç. Açıkça hangi dosyayı geliştirmek istediğini belirt.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section style="margin-top:20px">
+      <h3 style="margin:0 0 8px">Hızlı İpuçları</h3>
+      <div class="row">
+        <div class="col panel">
+          <strong>Şeffaflık</strong>
+          <p class="small">Admin kazananı seçtikten sonra <code>results.html</code> üzerinden herkes görebilir. Kazananlar <code>localStorage</code>'a kaydedilir.</p>
+        </div>
+        <div class="col panel">
+          <strong>Yedekleme</strong>
+          <p class="small">Admin panelinden export yaparak <code>participants.json</code> indir; kaybolma riskini azalt.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">Bu sayfa hazırlandı — hızlı istersin, şık olmasını da istiyorum. Değiştirmek istediğin metni söyle, ben keskin ve doğrudan düzenleyeyim.</div>
+    </footer>
   </main>
-
-  <footer class="app-footer">
-    <p>© 2025 Güvenli Çekiliş Sistemi | Aldo - Kral Abi </p>
-  </footer>
-
-  <script src="assets/js/storage.js"></script>
-  <script src="assets/js/raffle.js"></script>
 </body>
 </html>
