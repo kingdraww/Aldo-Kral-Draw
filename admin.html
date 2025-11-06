@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Paneli | Güvenli Çekiliş</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="app-container">
+  <header class="app-header">
+    <h1>🛠️ Admin Paneli</h1>
+    <p class="subtitle">Çekilişi yönet, kazananları belirle</p>
+  </header>
+
+  <main class="form-container">
+    <div class="admin-panel">
+      <section class="admin-section">
+        <h2>Katılımcı Listesi</h2>
+        <div id="participantList" class="list-box">
+          <p>Katılımcı verileri yükleniyor...</p>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h2>Çekiliş Kontrolleri</h2>
+        <label for="winnerCount">Kazanan Sayısı:</label>
+        <input type="number" id="winnerCount" min="1" max="100" value="1" />
+
+        <button id="selectWinners" class="btn-primary">🎯 Kazananları Seç</button>
+        <button id="clearAll" class="btn-danger">🧹 Tüm Veriyi Temizle</button>
+        <p id="adminMessage" class="info-msg"></p>
+      </section>
+
+      <section class="admin-section">
+        <h2>Son Kazananlar</h2>
+        <div id="winnerList" class="list-box">
+          <p>Henüz kazanan yok.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p>© 2025 Güvenli Çekiliş Sistemi | Aldo - Kral Abi </p>
+  </footer>
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
