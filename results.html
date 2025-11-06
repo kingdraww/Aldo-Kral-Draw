@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kazananlar | Güvenli Çekiliş</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="app-container">
+  <header class="app-header">
+    <h1>🎉 Çekiliş Sonuçları</h1>
+    <p class="subtitle">Kazananlar listesi — şeffaf ve doğrulanabilir</p>
+  </header>
+
+  <main class="results-container">
+    <section class="results-section">
+      <h2>Kazananlar</h2>
+      <div id="resultsBox" class="list-box">
+        <p>Kazananlar yükleniyor...</p>
+      </div>
+
+      <div class="copy-buttons">
+        <button id="copyUsernames" class="btn-primary">📋 Kullanıcı Adlarını Kopyala</button>
+        <button id="copyUIDs" class="btn-secondary">📋 UID’leri Kopyala</button>
+      </div>
+
+      <p id="copyMessage" class="info-msg"></p>
+    </section>
+
+    <section class="results-section">
+      <h2>Şeffaflık Notu</h2>
+      <p>Bu sonuçlar yalnızca cihazınızdaki verilerden yüklenmiştir. 
+         Eğer kazananlar görüntülenmiyorsa, çekiliş sahibinden doğru linki almanız gerekir.</p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>© 2025 Güvenli Çekiliş Sistemi | Aldo - Kral Abi </p>
+  </footer>
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/results.js"></script>
+</body>
+</html>
